@@ -26,5 +26,8 @@ public class PlayerCharacter {
         if (direction.equalsIgnoreCase("a")) {
             x = -1;
         }
+        if (direction.equalsIgnoreCase("d")) {
+            x = 1;
+        }
     }
 }

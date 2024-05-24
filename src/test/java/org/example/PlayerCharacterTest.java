@@ -50,4 +50,12 @@ public class PlayerCharacterTest {
         int actual = PlayerCharacter.getX();
         assertEquals(expected, actual);
     }
+
+    @Test
+    void move_returns1forX_whenPlayerPressD() {
+        int expected = 1;
+        PlayerCharacter.move("d");
+        int actual = PlayerCharacter.getX();
+        assertEquals(expected, actual);
+    }
 }
