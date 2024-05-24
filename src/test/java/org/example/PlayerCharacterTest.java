@@ -11,4 +11,10 @@ public class PlayerCharacterTest {
         int actual = PlayerCharacter.getX();
         assertEquals(expected, actual);
     }
+    @Test
+    void getY_returns0_initially() {
+        int expected = 0;
+        int actual = PlayerCharacter.getY();
+        assertEquals(expected, actual);
+    }
 }
