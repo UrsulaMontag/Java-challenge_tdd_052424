@@ -27,9 +27,17 @@ public class PlayerCharacterTest {
     }
 
     @Test
-    void move_returns1forY_whenPlayerMovesUp() {
+    void move_returns1forY_whenPlayerPressW() {
         int expected = 1;
         PlayerCharacter.move("W");
+        int actual = PlayerCharacter.getY();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void move_returnsMinus1forY_whenPlayerPressS() {
+        int expected = -1;
+        PlayerCharacter.move("s");
         int actual = PlayerCharacter.getY();
         assertEquals(expected, actual);
     }
