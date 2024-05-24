@@ -18,16 +18,16 @@ public class PlayerCharacter {
 
     public static void move(String direction) {
         if (direction.equalsIgnoreCase("w")) {
-            y = 1;
+            y += 1;
         }
         if (direction.equalsIgnoreCase("s")) {
-            y = -1;
+            y -= 1;
         }
         if (direction.equalsIgnoreCase("a")) {
-            x = -1;
+            x -= 1;
         }
         if (direction.equalsIgnoreCase("d")) {
-            x = 1;
+            x += 1;
         }
     }
 }

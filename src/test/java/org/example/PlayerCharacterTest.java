@@ -58,4 +58,45 @@ public class PlayerCharacterTest {
         int actual = PlayerCharacter.getX();
         assertEquals(expected, actual);
     }
+
+    @Test
+    void move_returns2forX_whenPlayerPressDTwice() {
+        int expected = 2;
+        PlayerCharacter.move("d");
+        PlayerCharacter.move("d");
+        int actual = PlayerCharacter.getX();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void move_returnsMinus3forY_whenPlayerPressSThrice() {
+        int expected = -3;
+        PlayerCharacter.move("s");
+        PlayerCharacter.move("s");
+        PlayerCharacter.move("s");
+        int actual = PlayerCharacter.getY();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void move_returnsMinus2forX_whenPlayerPressATwice() {
+        int expected = -2;
+        PlayerCharacter.move("a");
+        PlayerCharacter.move("a");
+        int actual = PlayerCharacter.getX();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void move_returnsMinus2forXAnd1ForY_whenPlayerPressATwiceAndW() {
+        int expectedX = -2;
+        int expectedY = 1;
+        PlayerCharacter.move("a");
+        PlayerCharacter.move("a");
+        PlayerCharacter.move("w");
+        int actualX = PlayerCharacter.getX();
+        int actualY = PlayerCharacter.getY();
+        assertEquals(expectedX, actualX);
+        assertEquals(expectedY, actualY);
+    }
 }
