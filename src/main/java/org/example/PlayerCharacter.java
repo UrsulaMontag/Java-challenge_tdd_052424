@@ -1,6 +1,8 @@
 package org.example;
 
 public class PlayerCharacter {
+    static int y = 0;
+    int x = 0;
 
     public static void main(String[] args) {
 
@@ -11,6 +13,12 @@ public class PlayerCharacter {
     }
 
     public static int getY() {
-        return 0;
+        return y;
+    }
+
+    public static void move(String direction) {
+        if (direction.equalsIgnoreCase("w")) {
+            y = 1;
+        }
     }
 }
