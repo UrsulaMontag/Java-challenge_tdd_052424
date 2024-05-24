@@ -19,8 +19,12 @@ public class PlayerCharacter {
     public static void move(String direction) {
         if (direction.equalsIgnoreCase("w")) {
             y = 1;
-        } else if (direction.equalsIgnoreCase("s")) {
+        }
+        if (direction.equalsIgnoreCase("s")) {
             y = -1;
+        }
+        if (direction.equalsIgnoreCase("a")) {
+            x = -1;
         }
     }
 }

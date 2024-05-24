@@ -10,6 +10,7 @@ public class PlayerCharacterTest {
     void setUp() {
         //wird vor jedem Testfall ausgeführt
         PlayerCharacter.y = 0;
+        PlayerCharacter.x = 0;
     }
 
     @Test
@@ -39,6 +40,14 @@ public class PlayerCharacterTest {
         int expected = -1;
         PlayerCharacter.move("s");
         int actual = PlayerCharacter.getY();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void move_returnsMinus1forX_whenPlayerPressA() {
+        int expected = -1;
+        PlayerCharacter.move("a");
+        int actual = PlayerCharacter.getX();
         assertEquals(expected, actual);
     }
 }
